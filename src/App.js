@@ -29,17 +29,16 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter") {
-      Axios(`${apiUrl}&query=${state.s}`).then((movie) => {
-        const results = movie.data.results;
-        setState((prevState) => {
-          return { ...prevState, results: results };
-        });
-      });
-
       Axios.get(apiPopular).then((data) => {
         const popular = data.data.results;
         setState((prevState) => {
           return { ...prevState, popular: popular };
+        });
+      });
+      Axios(`${apiUrl}&query=${state.s}`).then((movie) => {
+        const results = movie.data.results;
+        setState((prevState) => {
+          return { ...prevState, results: results };
         });
       });
     }
@@ -52,7 +51,9 @@ function App() {
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
+        <h2>Popular</h2>
         <ResultsScroll popular={state.popular} />
+        <h2>Search</h2>
         <Results results={state.results} />
       </main>
     </div>

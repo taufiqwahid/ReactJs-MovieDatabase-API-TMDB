@@ -6,7 +6,7 @@
 
 .result {
     text-align: center;
-    width: 150px;
+    width: 180px;
     justify-content: space-around;
     background-color: #263859;
     align-items: center;
@@ -17,11 +17,12 @@
 
     img {
         border-radius: 10px;
-        width: 150px;
+        width: 180px;
     }
 
     h4 {
         font-weight: 400;
+        font-size: 1rem;
         color: honeydew;
         margin: 10px;
         word-wrap: break-word;

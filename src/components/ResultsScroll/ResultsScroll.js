@@ -6,10 +6,10 @@ export default function ResultsScroll(results) {
   const popular = results.popular;
 
   return (
-    <div>
+    <div className="resultsScroll">
       {popular.map((data) => {
         return (
-          <div className="resultsScroll" key={data.id}>
+          <div className="resultScroll" key={data.id}>
             <img
               src={`${poster}${data.poster_path}`}
               alt="POSTER"
