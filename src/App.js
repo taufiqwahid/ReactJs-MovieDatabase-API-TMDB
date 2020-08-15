@@ -29,6 +29,8 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter") {
+      document.getElementById("popular").innerHTML = "Popular";
+      document.getElementById("searching").innerHTML = "Searching";
       Axios.get(apiPopular).then((data) => {
         const popular = data.data.results;
         setState((prevState) => {
@@ -51,9 +53,9 @@ function App() {
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
-        <h2>Popular</h2>
+        <h2 id="popular"></h2>
         <ResultsScroll popular={state.popular} />
-        <h2>Search</h2>
+        <h2 id="searching"></h2>
         <Results results={state.results} />
       </main>
     </div>
