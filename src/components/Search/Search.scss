@@ -1,8 +1,12 @@
 .searchBox-wrap {
+
+  margin: 10px 30px;
+
   .searchBox {
     display: block;
     width: 100%;
-    padding: 15px;
+    padding: 13px;
+    // margin: 10px;
 
     border: none;
     outline: none;
@@ -16,11 +20,13 @@
     font-weight: 300;
 
     transition: 0.4s ease-out;
+    margin-bottom: 20px;
 
     &:focus {
       outline: none;
       box-shadow: 0 0 2px 3px #999999;
     }
+
     &::placeholder {
       text-align: center;
     }

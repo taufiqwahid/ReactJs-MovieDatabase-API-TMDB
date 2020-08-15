@@ -5,11 +5,15 @@ export default function Result(result) {
 
   const results = result.result;
 
+  if (results === null) {
+    console.log("NOT FOUND MOVIE!");
+  }
+
   if (results.poster_path !== null) {
     return (
       <div className="result">
-        <img src={`${poster}${results.poster_path}`} alt="POSTER" width="200" />
-        <h3>{results.original_title}</h3>
+        <img src={`${poster}${results.poster_path}`} alt="POSTER" width="100" />
+        <h4>{results.original_title}</h4>
       </div>
     );
   } else {

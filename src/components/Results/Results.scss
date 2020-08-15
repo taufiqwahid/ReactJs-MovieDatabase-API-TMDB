@@ -1,0 +1,29 @@
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.result {
+    text-align: center;
+    width: 150px;
+    justify-content: space-around;
+    background-color: #263859;
+    align-items: center;
+    margin: 10px;
+    // border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
+    border-radius: 15px 15px 5px 5px;
+
+    img {
+        border-radius: 10px;
+        width: 150px;
+    }
+
+    h4 {
+        font-weight: 400;
+        color: honeydew;
+        margin: 10px;
+        word-wrap: break-word;
+    }
+}
