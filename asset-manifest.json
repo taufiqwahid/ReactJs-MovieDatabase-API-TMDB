@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ReactJs-MovieDatabase-API-TMDB/static/css/main.22bd4cd0.chunk.css",
+    "main.js": "/ReactJs-MovieDatabase-API-TMDB/static/js/main.c19e07fd.chunk.js",
+    "main.js.map": "/ReactJs-MovieDatabase-API-TMDB/static/js/main.c19e07fd.chunk.js.map",
+    "runtime-main.js": "/ReactJs-MovieDatabase-API-TMDB/static/js/runtime-main.69a988fd.js",
+    "runtime-main.js.map": "/ReactJs-MovieDatabase-API-TMDB/static/js/runtime-main.69a988fd.js.map",
+    "static/js/2.6f8880dc.chunk.js": "/ReactJs-MovieDatabase-API-TMDB/static/js/2.6f8880dc.chunk.js",
+    "static/js/2.6f8880dc.chunk.js.map": "/ReactJs-MovieDatabase-API-TMDB/static/js/2.6f8880dc.chunk.js.map",
+    "index.html": "/ReactJs-MovieDatabase-API-TMDB/index.html",
+    "precache-manifest.4e00e2728762c69a2a55f12b603ed9b2.js": "/ReactJs-MovieDatabase-API-TMDB/precache-manifest.4e00e2728762c69a2a55f12b603ed9b2.js",
+    "service-worker.js": "/ReactJs-MovieDatabase-API-TMDB/service-worker.js",
+    "static/css/main.22bd4cd0.chunk.css.map": "/ReactJs-MovieDatabase-API-TMDB/static/css/main.22bd4cd0.chunk.css.map",
+    "static/js/2.6f8880dc.chunk.js.LICENSE.txt": "/ReactJs-MovieDatabase-API-TMDB/static/js/2.6f8880dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69a988fd.js",
+    "static/js/2.6f8880dc.chunk.js",
+    "static/css/main.22bd4cd0.chunk.css",
+    "static/js/main.c19e07fd.chunk.js"
+  ]
+}
