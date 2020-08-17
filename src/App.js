@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Search from "./components/Search/Search.js";
-import "./App.scss";
+import Heading from "./components/Heading/Heading.js";
 import Results from "./components/Results/Results.js";
 import ResultsScroll from "./components/ResultsScroll/ResultsScroll.js";
+import "./App.scss";
 import Axios from "axios";
 
 function App() {
@@ -29,8 +30,8 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter") {
-      document.getElementById("popular").innerHTML = "Popular";
-      document.getElementById("searching").innerHTML = "Searching";
+      // document.getElementById("popular").innerHTML = "Popular";
+      // document.getElementById("searching").innerHTML = "Searching";
       Axios.get(apiPopular).then((data) => {
         const popular = data.data.results;
         setState((prevState) => {
@@ -49,13 +50,17 @@ function App() {
   return (
     <div className="App" id="App">
       <header>
-        <h1>Movie Database</h1>
+        <Heading size={1}>Movie Database</Heading>
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
-        <h2 id="popular"></h2>
+        <Heading size={2} id="popular">
+          Popular
+        </Heading>
         <ResultsScroll popular={state.popular} />
-        <h2 id="searching"></h2>
+        <Heading size={2} id="searching">
+          Searching
+        </Heading>
         <Results results={state.results} />
       </main>
     </div>

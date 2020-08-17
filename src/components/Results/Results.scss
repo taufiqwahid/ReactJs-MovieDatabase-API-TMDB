@@ -13,10 +13,10 @@
 
 .result {
     text-align: center;
-    width: 180px;
+    width: 130px;
     justify-content: space-around;
-    background-color: #0B2B40;
-
+    // background-color: #0B2B40;
+    background-color: #17223b;
     align-items: center;
     margin: 10px;
     // border-top-right-radius: 10px;
@@ -28,15 +28,42 @@
 
     img {
         border-radius: 10px;
-        width: 180px;
+        width: 130px;
         cursor: pointer;
     }
 
     h4 {
-        font-weight: 400;
-        font-size: 1rem;
-        color: honeydew;
-        margin: 10px;
+        // font-weight: 700;
+        font-size: 1em;
+        color: whitesmoke;
+        padding: 10px;
         word-wrap: break-word;
+    }
+}
+
+//TABLET
+@media (max-width:780px) {
+    .result {
+        width: 120px;
+
+        img {
+            width: 120px;
+        }
+    }
+}
+
+
+//HANDPHONE
+@media (max-width:580px) {
+    .result {
+        width: 110px;
+
+        img {
+            width: 110px;
+        }
+
+        h4 {
+            font-size: .9em;
+        }
     }
 }

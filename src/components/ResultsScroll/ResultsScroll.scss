@@ -18,23 +18,25 @@
 
     .resultScroll {
         margin: 15px 10px 0 10px;
-        width: 130px;
         background-color: #17223b;
         text-align: center;
         border-radius: 10px 10px 15px 15px;
-cursor: pointer;
+        cursor: pointer;
         -webkit-box-shadow: 6px 6px 14px -5px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 6px 6px 14px -5px rgba(0, 0, 0, 0.75);
         box-shadow: 6px 6px 14px -5px rgba(0, 0, 0, 0.75);
 
         img {
-            width: 130px;
+            width: 100px;
             border-radius: 10px 10px 15px 15px;
         }
 
         h4 {
+            font-size: .8em;
             color: whitesmoke;
+            font-weight: 700;
             padding: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
     }
 }

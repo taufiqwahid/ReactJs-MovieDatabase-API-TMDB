@@ -11,7 +11,7 @@ export default function Result(result) {
 
   if (results.poster_path !== null) {
     return (
-      <div className="result">
+      <div className="result" id={results.id}>
         <img src={`${poster}${results.poster_path}`} alt="POSTER" width="100" />
         <h4>{results.original_title}</h4>
       </div>

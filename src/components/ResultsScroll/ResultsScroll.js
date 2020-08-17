@@ -9,7 +9,7 @@ export default function ResultsScroll(results) {
     <div className="resultsScroll">
       {popular.map((data) => {
         return (
-          <div className="resultScroll" key={data.id}>
+          <div className="resultScroll" key={data.id} id={data.id}>
             <img
               src={`${poster}${data.poster_path}`}
               alt="POSTER"

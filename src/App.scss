@@ -5,13 +5,12 @@
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background: #263859;
   background: -moz-linear-gradient(-45deg, #263859 0%, #030C12 50%, #263859 100%);
   background: -webkit-linear-gradient(-45deg, #263859 0%, #030C12 50%, #263859 100%);
   background: linear-gradient(135deg, #263859 0%, #030C12 50%, #263859 100%);
   color: #6b778d;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #App {
@@ -26,9 +25,10 @@ body {
     h1 {
       // color: #6b778d;
       color: whitesmoke;
-      font-size: 4rem;
+      font-size: 4em;
       font-weight: 500;
       text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
   }
 
