@@ -18,6 +18,7 @@ export default function Result({ result, openDetail }) {
       >
         <img src={`${poster}${result.poster_path}`} alt="POSTER" width="100" />
         <h4>{result.title}</h4>
+        <p>({result.release_date})</p>
       </div>
     );
   } else {

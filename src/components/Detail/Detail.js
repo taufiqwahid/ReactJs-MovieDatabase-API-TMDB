@@ -3,26 +3,29 @@ import "./Detail.scss";
 
 export default function Detail({ selected, closeDetail }) {
   const poster = "https://image.tmdb.org/t/p/original";
+  // const backdrop_path = `${poster}${selected.backdrop_path}`;
+  console.log(selected);
   return (
-    <section className="detail">
-      <div className="content">
-        <h2>
-          {selected.title} <span>({selected.release_date})</span>
-        </h2>
-        <p className="rating">popularity: {selected.popularity}</p>
-        <div className="plot">
-          <img
-            src={`${poster}${selected.poster_path}`}
-            alt="POSTER"
-            width="100"
-          />
-          <p>{selected.overview}</p>
-          <p>Status Movie : {selected.status}</p>
-        </div>
-        <button className="close" onClick={closeDetail}>
-          Close
-        </button>
+    <section className="popup">
+      <div className="close" onClick={closeDetail}>
+        &times;
       </div>
+      <div className="content">
+        <img
+          src={`${poster}${selected.poster_path}`}
+          alt="POSTER"
+          width="100"
+        />
+        <div className="description">
+          <h2>{selected.title}</h2>
+          <p className="overview">{selected.overview}</p>
+          <p className="status">Status : {selected.status}</p>
+          <p>Release : ({selected.release_date})</p>
+          <p className="popularity">popularity: {selected.popularity}</p>
+        </div>
+      </div>
+
+      {/* Close */}
     </section>
   );
 }

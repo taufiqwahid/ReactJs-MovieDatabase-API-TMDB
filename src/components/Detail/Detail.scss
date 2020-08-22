@@ -1,0 +1,68 @@
+.popup {
+    padding: 20px;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        // background-color: #1112;
+        background-color: #fff;
+        justify-content: center;
+
+        img {
+            border-radius: 10px;
+        }
+
+        .description {
+            margin: 15px;
+
+            h2 {
+                color: #263859;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .overview {
+                color: #6b778d;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .status {
+                padding-top: 15px;
+            }
+
+            .popularity {
+                padding-bottom: 15px;
+            }
+        }
+
+
+    }
+
+    .close {
+        // text-decoration-line: none;
+        color: darkseagreen;
+        font-size: 40px;
+        // position: absolute;
+        float: right;
+        background: none;
+        // left: 95%;
+        cursor: pointer;
+        // background-color: #a11;
+    }
+
+
+}
+
+@media (max-width:900px) {
+    .popup {
+        .content {
+            flex-direction: column;
+
+            img {
+                margin: 0 auto;
+                width: 40%;
+            }
+        }
+    }
+}

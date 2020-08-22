@@ -9,7 +9,7 @@ import "./App.scss";
 import Axios from "axios";
 import Popup from "reactjs-popup";
 
-import Flip from "react-reveal/Flip";
+import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
 function App() {
@@ -38,17 +38,17 @@ function App() {
     });
   };
 
-  Axios.get(apiPopular).then((data) => {
-    const popular = data.data.results;
-    setState((prevState) => {
-      return { ...prevState, popular: popular };
-    });
-  });
-
   const search = (e) => {
+    Axios.get(apiPopular).then((data) => {
+      const popular = data.data.results;
+      setState((prevState) => {
+        return { ...prevState, popular: popular };
+      });
+    });
     if (e.key === "Enter") {
       // document.getElementById("popular").innerHTML = "Popular";
       // document.getElementById("searching").innerHTML = "Searching";
+
       Axios(`${apiUrl}&query=${state.s}`).then((movie) => {
         const results = movie.data.results;
         setState((prevState) => {
@@ -65,6 +65,7 @@ function App() {
         return { ...prevState, selected: result, popup: true };
       });
     });
+    console.log(state.selected);
   };
 
   const closeDetail = () => {
@@ -84,27 +85,29 @@ function App() {
         <Zoom>
           <Search handleInput={handleInput} search={search} />
         </Zoom>
-        <Flip left delay={300}>
-          <Heading size={2} id="popular">
-            Popular
-          </Heading>
-        </Flip>
+
+        <Heading size={2} id="popular">
+          Popular
+        </Heading>
         <ResultsScroll popular={state.popular} />
-        <Flip left delay={500}></Flip>
 
         {state.results[0] ? (
-          <Flip delay={500} left>
+          <Fade delay={500} bottom>
             <Heading size={2} id="searching">
               Searching
             </Heading>
             <Results results={state.results} openDetail={openDetail} />
-          </Flip>
+          </Fade>
         ) : (
-          console.log("Not Found Results Movie")
+          false
         )}
-
-        {typeof state.selected.title != "undefined" ? (
-          <Popup open={state.popup} closeOnDocumentClick onClose={closeDetail}>
+        {state.selected.title !== null ? (
+          <Popup
+            className="Popup"
+            open={state.popup}
+            closeOnDocumentClick
+            onClose={closeDetail}
+          >
             <Detail selected={state.selected} closeDetail={closeDetail} />
           </Popup>
         ) : (
