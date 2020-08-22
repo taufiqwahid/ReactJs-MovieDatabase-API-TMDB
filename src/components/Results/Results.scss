@@ -1,69 +1,70 @@
 .results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #263859;
-    padding: 10px 0;
-    border-radius: 30px;
-    margin: 20px;
-    -webkit-box-shadow: 0px 3px 15px 0px #000000;
-    box-shadow: 0px 3px 15px 0px #000000;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #263859;
+  padding: 10px 0;
+  border-radius: 30px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 3px 15px 0px #000000;
+  box-shadow: 0px 3px 15px 0px #000000;
 }
 
 .result {
-    text-align: center;
+  text-align: center;
+  width: 130px;
+  justify-content: space-around;
+  // background-color: #0B2B40;
+  background-color: #17223b;
+  align-items: center;
+  margin: 10px;
+  // border-top-right-radius: 10px;
+  // border-top-left-radius: 10px;
+  border-radius: 15px 15px 5px 5px;
+  -webkit-box-shadow: 0px 0px 7px -1px #000000;
+  box-shadow: 0px 0px 7px -1px #000000;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+  }
+  img {
+    border-radius: 10px;
     width: 130px;
-    justify-content: space-around;
-    // background-color: #0B2B40;
-    background-color: #17223b;
-    align-items: center;
-    margin: 10px;
-    // border-top-right-radius: 10px;
-    // border-top-left-radius: 10px;
-    border-radius: 15px 15px 5px 5px;
-    -webkit-box-shadow: 0px 0px 7px -1px #000000;
-    box-shadow: 0px 0px 7px -1px #000000;
-    transition: .1s ease-in;
+    cursor: pointer;
+  }
 
-    img {
-        border-radius: 10px;
-        width: 130px;
-        cursor: pointer;
-    }
-
-    h4 {
-        // font-weight: 700;
-        font-size: 1em;
-        color: whitesmoke;
-        padding: 10px;
-        word-wrap: break-word;
-    }
+  h4 {
+    // font-weight: 700;
+    font-size: 1em;
+    color: whitesmoke;
+    padding: 10px;
+    word-wrap: break-word;
+  }
 }
 
 //TABLET
-@media (max-width:780px) {
-    .result {
-        width: 120px;
+@media (max-width: 780px) {
+  .result {
+    width: 120px;
 
-        img {
-            width: 120px;
-        }
+    img {
+      width: 120px;
     }
+  }
 }
 
-
 //HANDPHONE
-@media (max-width:580px) {
-    .result {
-        width: 110px;
+@media (max-width: 580px) {
+  .result {
+    width: 110px;
 
-        img {
-            width: 110px;
-        }
-
-        h4 {
-            font-size: .9em;
-        }
+    img {
+      width: 110px;
     }
+
+    h4 {
+      font-size: 0.9em;
+    }
+  }
 }

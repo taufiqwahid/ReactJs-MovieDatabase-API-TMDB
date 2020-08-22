@@ -15,7 +15,7 @@ export default function ResultsScroll(results) {
               alt="POSTER"
               width="100"
             />
-            <h4>{data.original_title}</h4>
+            <h4>{data.title}</h4>
           </div>
         );
       })}
