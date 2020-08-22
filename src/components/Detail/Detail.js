@@ -1,4 +1,5 @@
 import React from "react";
+import "./Detail.scss";
 
 export default function Detail({ selected, closeDetail }) {
   const poster = "https://image.tmdb.org/t/p/original";

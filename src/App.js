@@ -9,6 +9,9 @@ import "./App.scss";
 import Axios from "axios";
 import Popup from "reactjs-popup";
 
+import Flip from "react-reveal/Flip";
+import Zoom from "react-reveal/Zoom";
+
 function App() {
   // "https://api.themoviedb.org/3/search/movie?api_key=f1ab19c53cebd5165e00ac39dcf8b1ef&query=BATMAN";
   const apiUrl =
@@ -35,16 +38,17 @@ function App() {
     });
   };
 
+  Axios.get(apiPopular).then((data) => {
+    const popular = data.data.results;
+    setState((prevState) => {
+      return { ...prevState, popular: popular };
+    });
+  });
+
   const search = (e) => {
     if (e.key === "Enter") {
       // document.getElementById("popular").innerHTML = "Popular";
       // document.getElementById("searching").innerHTML = "Searching";
-      Axios.get(apiPopular).then((data) => {
-        const popular = data.data.results;
-        setState((prevState) => {
-          return { ...prevState, popular: popular };
-        });
-      });
       Axios(`${apiUrl}&query=${state.s}`).then((movie) => {
         const results = movie.data.results;
         setState((prevState) => {
@@ -71,20 +75,33 @@ function App() {
 
   return (
     <div className="App" id="App">
-      <header>
-        <Heading size={1}>Movie Database</Heading>
-      </header>
+      <Zoom>
+        <header>
+          <Heading size={1}>Movie Database</Heading>
+        </header>
+      </Zoom>
       <main>
-        <Search handleInput={handleInput} search={search} />
-        <Heading size={2} id="popular">
-          Popular
-        </Heading>
+        <Zoom>
+          <Search handleInput={handleInput} search={search} />
+        </Zoom>
+        <Flip left delay={300}>
+          <Heading size={2} id="popular">
+            Popular
+          </Heading>
+        </Flip>
         <ResultsScroll popular={state.popular} />
+        <Flip left delay={500}></Flip>
 
-        <Heading size={2} id="searching">
-          Searching
-        </Heading>
-        <Results results={state.results} openDetail={openDetail} />
+        {state.results[0] ? (
+          <Flip delay={500} left>
+            <Heading size={2} id="searching">
+              Searching
+            </Heading>
+            <Results results={state.results} openDetail={openDetail} />
+          </Flip>
+        ) : (
+          console.log("Not Found Results Movie")
+        )}
 
         {typeof state.selected.title != "undefined" ? (
           <Popup open={state.popup} closeOnDocumentClick onClose={closeDetail}>
