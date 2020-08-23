@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ReactJs-MovieDatabase-API-TMDB/static/css/main.49b2dc3c.chunk.css",
-    "main.js": "/ReactJs-MovieDatabase-API-TMDB/static/js/main.755b98de.chunk.js",
-    "main.js.map": "/ReactJs-MovieDatabase-API-TMDB/static/js/main.755b98de.chunk.js.map",
+    "main.css": "/ReactJs-MovieDatabase-API-TMDB/static/css/main.2061ec9c.chunk.css",
+    "main.js": "/ReactJs-MovieDatabase-API-TMDB/static/js/main.585407b8.chunk.js",
+    "main.js.map": "/ReactJs-MovieDatabase-API-TMDB/static/js/main.585407b8.chunk.js.map",
     "runtime-main.js": "/ReactJs-MovieDatabase-API-TMDB/static/js/runtime-main.69a988fd.js",
     "runtime-main.js.map": "/ReactJs-MovieDatabase-API-TMDB/static/js/runtime-main.69a988fd.js.map",
     "static/js/2.b3eb9b8c.chunk.js": "/ReactJs-MovieDatabase-API-TMDB/static/js/2.b3eb9b8c.chunk.js",
     "static/js/2.b3eb9b8c.chunk.js.map": "/ReactJs-MovieDatabase-API-TMDB/static/js/2.b3eb9b8c.chunk.js.map",
     "index.html": "/ReactJs-MovieDatabase-API-TMDB/index.html",
-    "precache-manifest.2417b6b1ad9c2ac01ab3ab4a6dc75e0d.js": "/ReactJs-MovieDatabase-API-TMDB/precache-manifest.2417b6b1ad9c2ac01ab3ab4a6dc75e0d.js",
+    "precache-manifest.7d8661b7dc68b8e60458834f498b3880.js": "/ReactJs-MovieDatabase-API-TMDB/precache-manifest.7d8661b7dc68b8e60458834f498b3880.js",
     "service-worker.js": "/ReactJs-MovieDatabase-API-TMDB/service-worker.js",
-    "static/css/main.49b2dc3c.chunk.css.map": "/ReactJs-MovieDatabase-API-TMDB/static/css/main.49b2dc3c.chunk.css.map",
+    "static/css/main.2061ec9c.chunk.css.map": "/ReactJs-MovieDatabase-API-TMDB/static/css/main.2061ec9c.chunk.css.map",
     "static/js/2.b3eb9b8c.chunk.js.LICENSE.txt": "/ReactJs-MovieDatabase-API-TMDB/static/js/2.b3eb9b8c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.69a988fd.js",
     "static/js/2.b3eb9b8c.chunk.js",
-    "static/css/main.49b2dc3c.chunk.css",
-    "static/js/main.755b98de.chunk.js"
+    "static/css/main.2061ec9c.chunk.css",
+    "static/js/main.585407b8.chunk.js"
   ]
 }
