@@ -13,12 +13,13 @@
         }
 
         .description {
-            margin: 15px;
+            font-size: .9em;
 
             h2 {
                 color: #263859;
                 font-weight: bold;
                 text-align: center;
+                // font-size: 1.2em;
             }
 
             .overview {
@@ -28,12 +29,14 @@
             }
 
             .status {
-                padding-top: 15px;
+                margin-top: 5px;
             }
 
-            .popularity {
-                padding-bottom: 15px;
+            .note {
+                margin-left: 10px;
             }
+
+
         }
 
 
@@ -62,6 +65,14 @@
             img {
                 margin: 0 auto;
                 width: 40%;
+            }
+
+            .description {
+                font-size: .7em;
+
+                .popularity {
+                    padding-bottom: 0px;
+                }
             }
         }
     }

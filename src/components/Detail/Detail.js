@@ -7,9 +7,6 @@ export default function Detail({ selected, closeDetail }) {
   console.log(selected);
   return (
     <section className="popup">
-      <div className="close" onClick={closeDetail}>
-        &times;
-      </div>
       <div className="content">
         <img
           src={`${poster}${selected.poster_path}`}
@@ -19,9 +16,12 @@ export default function Detail({ selected, closeDetail }) {
         <div className="description">
           <h2>{selected.title}</h2>
           <p className="overview">{selected.overview}</p>
-          <p className="status">Status : {selected.status}</p>
-          <p>Release : ({selected.release_date})</p>
-          <p className="popularity">popularity: {selected.popularity}</p>
+          <div className="note">
+            <p className="status">Status : {selected.status}</p>
+            <p className="vote">Rating : {selected.vote_average}</p>
+            <p className="release">Release : ({selected.release_date})</p>
+            <p className="popularity">popularity : {selected.popularity}</p>
+          </div>
         </div>
       </div>
 

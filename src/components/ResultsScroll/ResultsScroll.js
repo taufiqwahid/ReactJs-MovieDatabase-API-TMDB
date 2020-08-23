@@ -18,6 +18,9 @@ export default function ResultsScroll(results) {
                 width="100"
               />
               <h4>{data.title}</h4>
+              <div className="vote">
+                <p>{data.vote_average}</p>
+              </div>
             </div>
           </Fade>
         );
